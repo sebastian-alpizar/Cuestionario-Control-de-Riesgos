@@ -1,6 +1,5 @@
 <template>
   <div class="relative bg-black min-h-screen text-white flex flex-col overflow-hidden">
-     
     <HeaderComponent/>
 
     <div class="flex-grow relative pt-25 pb-30">

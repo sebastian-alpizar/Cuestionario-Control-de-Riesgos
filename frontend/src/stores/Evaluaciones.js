@@ -1,6 +1,5 @@
 import { defineStore } from 'pinia';
-import axios from 'axios';
-const api = import.meta.env.VITE_API_URL
+import api from '@/plugins/axios'
 
 export const useEvaluacionesStore = defineStore("evaluaciones", {
   state: () => ({
@@ -14,8 +13,8 @@ export const useEvaluacionesStore = defineStore("evaluaciones", {
       if (this.cargado || this.cargando) return; // ya cargado o cargando
       this.cargando = true;
       try {
-        const res = await axios.get(
-          `${api}/evaluaciones?usuario_id=${usuarioId}`
+        const res = await api.get(
+          `/api/evaluaciones?usuario_id=${usuarioId}`
         );
         this.evaluaciones = res.data;
         this.cargado = true;

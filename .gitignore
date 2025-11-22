@@ -1,0 +1,85 @@
+############################
+#      GLOBAL SETTINGS     #
+############################
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+############################
+#       BACKEND (Laravel)  #
+############################
+
+# Environment
+/backend/.env
+/backend/.env.local
+/backend/.env.*.php
+/backend/.env.backup
+
+# Vendor (Composer dependencies)
+backend/vendor/
+
+# Laravel storage
+backend/storage/*.key
+backend/storage/app/*
+!backend/storage/app/.gitignore
+backend/storage/framework/*
+!backend/storage/framework/.gitignore
+backend/storage/framework/cache/*
+backend/storage/framework/sessions/*
+backend/storage/framework/views/*
+backend/storage/logs/*
+!backend/storage/logs/.gitignore
+
+# Cache
+backend/bootstrap/cache/*.php
+!backend/bootstrap/cache/.gitignore
+
+# Compiled files
+backend/.phpunit.result.cache
+
+############################
+#      FRONTEND (Vue)      #
+############################
+
+# Node
+/frontend/node_modules/
+
+# Dist / Build
+frontend/dist/
+frontend/.vite/
+
+# Local env
+/frontend/.env
+/frontend/.env.local
+/frontend/.env.*.local
+
+# Cache
+frontend/.cache/
+frontend/.nuxt/
+frontend/.output/
+
+# Editor backups
+*.swo
+*.swp
+*.tmp
+
+############################
+#          ROOT            #
+############################
+
+# If git is tracking root-level files
+.env
+.env.local

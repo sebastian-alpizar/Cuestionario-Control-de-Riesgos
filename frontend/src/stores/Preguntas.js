@@ -1,6 +1,5 @@
 import { defineStore } from 'pinia'
-import axios from 'axios'
-const api = import.meta.env.VITE_API_URL
+import api from '@/plugins/axios'
 
 export const usePreguntasStore = defineStore('preguntas', {
   state: () => ({
@@ -14,7 +13,7 @@ export const usePreguntasStore = defineStore('preguntas', {
       if (this.preguntas.length > 0) return // ya están cargadas, no volver a pedir
       this.cargando = true
       try {
-        const res = await axios.get(`${api}/preguntas`)
+        const res = await api.get('/api/preguntas')
         this.preguntas = res.data
 
         this.preguntas.forEach(p => {
